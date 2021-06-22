@@ -1,0 +1,3 @@
+personal emacs config manager
+
+use database to organzie config.
