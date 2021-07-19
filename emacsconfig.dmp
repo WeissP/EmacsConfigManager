@@ -1,0 +1,353 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 13.2
+-- Dumped by pg_dump version 13.2
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+SET default_tablespace = '';
+
+SET default_table_access_method = heap;
+
+--
+-- Name: class_relation; Type: TABLE; Schema: public; Owner: weiss
+--
+
+CREATE TABLE public.class_relation (
+    child character varying NOT NULL,
+    parent character varying NOT NULL
+);
+
+
+ALTER TABLE public.class_relation OWNER TO weiss;
+
+--
+-- Name: file; Type: TABLE; Schema: public; Owner: weiss
+--
+
+CREATE TABLE public.file (
+    filename character varying NOT NULL,
+    module_name character varying NOT NULL,
+    class character varying NOT NULL
+);
+
+
+ALTER TABLE public.file OWNER TO weiss;
+
+--
+-- Data for Name: class_relation; Type: TABLE DATA; Schema: public; Owner: weiss
+--
+
+COPY public.class_relation (child, parent) FROM stdin;
+weiss-org-sp-mode	org
+org-roam	org
+font-lock-face	ui
+modeline	ui
+ccls	lsp-mode
+lsp-java	lsp-mode
+hydra	wks
+dired-filter	dired
+ein	python
+lsp-ui	lsp-mode
+wdired	dired
+all-the-icons-dired	dired
+all-the-icons	ui
+amx	counsel
+anzu	ui
+babel	org
+color-outline	ui
+company-box	company
+diredfl	dired
+display-line-numbers	ui
+emojify	ui
+git-messenger	magit
+hasky-stack	haskell
+highlight-indent-guides	ui
+highlight-parentheses	ui
+hl-line	ui
+hl-todo	ui
+ivy-prescient	counsel
+ivy-rich	counsel
+ligature	ui
+lsp-python-ms	lsp-mode
+org-fancy-priorities	org
+org-tempo	org
+ormolu	haskell
+pdf-view-restore	pdf-tools
+peep-dired	dired
+popwin	window-frame
+prescient	counsel
+rainbow-mode	ui
+sql-indent	sql
+whitespace	ui
+wucuo	flyspell
+citre-peek	citre
+zprint	cider
+clj-refactor	cider
+\.
+
+
+--
+-- Data for Name: file; Type: TABLE DATA; Schema: public; Owner: weiss
+--
+
+COPY public.file (filename, module_name, class) FROM stdin;
+weiss_settings<go-mode.el	settings	go-mode
+weiss_go<abbrevs.el	go	abbrevs
+weiss_addvices<weiss-org-sp-mode.el	addvices	weiss-org-sp-mode
+weiss_agenda<org.el	agenda	org
+weiss_alternativ-do<snails.el	alternativ-do	snails
+weiss_arrow-key<wks.el	arrow-key	wks
+weiss_buffer-frame-switching<wks.el	buffer-frame-switching	wks
+weiss_capture<org.el	capture	org
+weiss_capture<telega.el	capture	telega
+weiss_checker<lsp-mode.el	checker	lsp-mode
+weiss_completion<lsp-mode.el	completion	lsp-mode
+weiss_compress<dired.el	compress	dired
+weiss_core<wks.el	core	wks
+weiss_settings<counsel.el	settings	counsel
+weiss_cpp<abbrevs.el	cpp	abbrevs
+weiss_cursor-movement<wks.el	cursor-movement	wks
+weiss_c++<abbrevs.el	c++	abbrevs
+weiss_daily<org-roam.el	daily	org-roam
+weiss_define-elisp-face<font-lock-face.el	define-elisp-face	font-lock-face
+weiss_define-mode<weiss-org-sp-mode.el	define-mode	weiss-org-sp-mode
+weiss_dwim<org.el	dwim	org
+weiss_editing<wks.el	editing	wks
+weiss_edit<latex.el	edit	latex
+weiss_edit<org.el	edit	org
+weiss_eldoc<ui.el	eldoc	ui
+weiss_elisp<abbrevs.el	elisp	abbrevs
+weiss_elisp<font-lock-face.el	elisp	font-lock-face
+weiss_eshell<abbrevs.el	eshell	abbrevs
+weiss_export<latex.el	export	latex
+weiss_export<org.el	export	org
+weiss_face<table.el	face	table
+weiss_flycheck<modeline.el	flycheck	modeline
+weiss_font<ui.el	font	ui
+weiss_format<ccls.el	format	ccls
+weiss_format<lsp-java.el	format	lsp-java
+weiss_frame<ui.el	frame	ui
+weiss_functions<weiss-org-sp-mode.el	functions	weiss-org-sp-mode
+weiss_fuzzy-match<snails.el	fuzzy-match	snails
+weiss_git<modeline.el	git	modeline
+weiss_haskell<abbrevs.el	haskell	abbrevs
+weiss_haskell<font-lock-face.el	haskell	font-lock-face
+weiss_hooks<org.el	hooks	org
+weiss_html<abbrevs.el	html	abbrevs
+weiss_hydras<hydra.el	hydras	hydra
+weiss_hydra<dired-filter.el	hydra	dired-filter
+weiss_image<org.el	image	org
+weiss_imaxima<abbrevs.el	imaxima	abbrevs
+weiss_ivy-inital<org-roam.el	ivy-inital	org-roam
+weiss_javadoc<lsp-java.el	javadoc	lsp-java
+weiss_java<abbrevs.el	java	abbrevs
+weiss_j<font-lock-face.el	j	font-lock-face
+weiss_keybindings<ccls.el	keybindings	ccls
+weiss_keybindings<company.el	keybindings	company
+weiss_keybindings<counsel.el	keybindings	counsel
+weiss_keybindings<dired.el	keybindings	dired
+weiss_keybindings<ein.el	keybindings	ein
+weiss_keybindings<go-mode.el	keybindings	go-mode
+weiss_keybindings<haskell.el	keybindings	haskell
+weiss_keybindings<http.el	keybindings	http
+weiss_keybindings<js.el	keybindings	js
+weiss_keybindings<json-mode.el	keybindings	json-mode
+weiss_keybindings<latex.el	keybindings	latex
+weiss_keybindings<lsp-java.el	keybindings	lsp-java
+weiss_keybindings<lsp-mode.el	keybindings	lsp-mode
+weiss_keybindings<lsp-ui.el	keybindings	lsp-ui
+weiss_keybindings<magit.el	keybindings	magit
+weiss_keybindings<markdown-mode.el	keybindings	markdown-mode
+weiss_keybindings<org.el	keybindings	org
+weiss_keybindings<org-roam.el	keybindings	org-roam
+weiss_keybindings<php.el	keybindings	php
+weiss_keybindings<python.el	keybindings	python
+weiss_keybindings<rime.el	keybindings	rime
+weiss_keybindings<snails.el	keybindings	snails
+weiss_keybindings<telega.el	keybindings	telega
+weiss_keybindings<sql.el	keybindings	sql
+weiss_keybindings<wdired.el	keybindings	wdired
+weiss_keybindings<wks.el	keybindings	wks
+weiss_kmacro<modeline.el	kmacro	modeline
+weiss_kmacro<wks.el	kmacro	wks
+weiss_latex<abbrevs.el	latex	abbrevs
+weiss_leader<wks.el	leader	wks
+weiss_line-numbers<modeline.el	line-numbers	modeline
+weiss_lsp-haskell<lsp-mode.el	lsp-haskell	lsp-mode
+weiss_misc<dired.el	misc	dired
+weiss_misc<org.el	misc	org
+weiss_misc<org-roam.el	misc	org-roam
+weiss_settings<snails.el	settings	snails
+weiss_misc-function<wks.el	misc-function	wks
+weiss_settings<modeline.el	settings	modeline
+weiss_open-file<org-roam.el	open-file	org-roam
+weiss_open<org.el	open	org
+weiss_org-edit-special<org.el	org-edit-special	org
+weiss_org-roam<font-lock-face.el	org-roam	font-lock-face
+weiss_org<abbrevs.el	org	abbrevs
+weiss_org<font-lock-face.el	org	font-lock-face
+weiss_pdf<modeline.el	pdf	modeline
+weiss_php<abbrevs.el	php	abbrevs
+weiss_predicate<rime.el	predicate	rime
+weiss_predicate<weiss-org-sp-mode.el	predicate	weiss-org-sp-mode
+weiss_preview<latex.el	preview	latex
+weiss_python<abbrevs.el	python	abbrevs
+weiss_python<font-lock-face.el	python	font-lock-face
+weiss_quick-insert<http.el	quick-insert	http
+weiss_quick-insert<latex.el	quick-insert	latex
+weiss_quick-insert<org.el	quick-insert	org
+weiss_quick-insert<wks.el	quick-insert	wks
+weiss_reduce-path<snails.el	reduce-path	snails
+weiss_refile<org.el	refile	org
+weiss_repeat-command<wks.el	repeat-command	wks
+weiss_roam-find-file<org-roam.el	roam-find-file	org-roam
+weiss_root-dir<modeline.el	root-dir	modeline
+weiss_save-open-new-copy<wks.el	save-open-new-copy	wks
+weiss_select-mode<wks.el	select-mode	wks
+weiss_select<wks.el	select	wks
+weiss_settings<abbrevs.el	settings	abbrevs
+weiss_settings<all-the-icons-dired.el	settings	all-the-icons-dired
+weiss_settings<all-the-icons.el	settings	all-the-icons
+weiss_settings<amx.el	settings	amx
+weiss_settings<anzu.el	settings	anzu
+weiss_settings<babel.el	settings	babel
+weiss_settings<casease.el	settings	casease
+weiss_settings<ccls.el	settings	ccls
+weiss_settings<chinese-yasdcv.el	settings	chinese-yasdcv
+weiss_settings<color-outline.el	settings	color-outline
+weiss_settings<company.el	settings	company
+weiss_settings<company-box.el	settings	company-box
+weiss_settings<dired.el	settings	dired
+weiss_settings<diredfl.el	settings	diredfl
+weiss_settings<dired-filter.el	settings	dired-filter
+weiss_settings<display-line-numbers.el	settings	display-line-numbers
+weiss_settings<dockerfile-mode.el	settings	dockerfile-mode
+weiss_settings<ein.el	settings	ein
+weiss_settings<emacs-yakuake.el	settings	emacs-yakuake
+weiss_settings<emojify.el	settings	emojify
+weiss_settings<expand-region.el	settings	expand-region
+weiss_settings<flycheck.el	settings	flycheck
+weiss_settings<flyspell.el	settings	flyspell
+weiss_settings<font-lock-face.el	settings	font-lock-face
+weiss_settings<gcmh.el	settings	gcmh
+weiss_settings<git-messenger.el	settings	git-messenger
+weiss_settings<haskell.el	settings	haskell
+weiss_settings<hasky-stack.el	settings	hasky-stack
+weiss_settings<highlight-indent-guides.el	settings	highlight-indent-guides
+weiss_settings<highlight-parentheses.el	settings	highlight-parentheses
+weiss_settings<hl-line.el	settings	hl-line
+weiss_settings<hl-todo.el	settings	hl-todo
+weiss_settings<ivy-prescient.el	settings	ivy-prescient
+weiss_settings<ivy-rich.el	settings	ivy-rich
+weiss_settings<keyfreq.el	settings	keyfreq
+weiss_settings<latex.el	settings	latex
+weiss_settings<ligature.el	settings	ligature
+weiss_settings<lsp-java.el	settings	lsp-java
+weiss_settings<lsp-mode.el	settings	lsp-mode
+weiss_settings<lsp-python-ms.el	settings	lsp-python-ms
+weiss_settings<lsp-ui.el	settings	lsp-ui
+weiss_settings<magit.el	settings	magit
+weiss_settings<markdown-mode.el	settings	markdown-mode
+weiss_settings<maxima.el	settings	maxima
+weiss_settings<org.el	settings	org
+weiss_settings<org-fancy-priorities.el	settings	org-fancy-priorities
+weiss_settings<org-roam-server.el	settings	org-roam-server
+weiss_settings<org-roam.el	settings	org-roam
+weiss_settings<org-tempo.el	settings	org-tempo
+weiss_settings<ormolu.el	settings	ormolu
+weiss_settings<pdf-tools.el	settings	pdf-tools
+weiss_settings<pdf-view-restore.el	settings	pdf-view-restore
+weiss_settings<peep-dired.el	settings	peep-dired
+weiss_settings<popwin.el	settings	popwin
+weiss_settings<prescient.el	settings	prescient
+weiss_settings<projectile.el	settings	projectile
+weiss_settings<python.el	settings	python
+weiss_settings<quickrun.el	settings	quickrun
+weiss_settings<rainbow-mode.el	settings	rainbow-mode
+weiss_settings<recentf.el	settings	recentf
+weiss_settings<rime.el	settings	rime
+weiss_settings<rotate-text.el	settings	rotate-text
+weiss_settings<server.el	settings	server
+weiss_settings<snails-roam.el	settings	snails-roam
+weiss_settings<sql.el	settings	sql
+weiss_settings<sql-indent.el	settings	sql-indent
+weiss_settings<super-save.el	settings	super-save
+weiss_settings<telega.el	settings	telega
+weiss_settings<tramp.el	settings	tramp
+weiss_settings<ui.el	settings	ui
+weiss_settings<web-mode.el	settings	web-mode
+weiss_settings<which-key.el	settings	which-key
+weiss_settings<whitespace.el	settings	whitespace
+weiss_settings<wucuo.el	settings	wucuo
+weiss_settings<yasdcv.el	settings	yasdcv
+weiss_slug<org-roam.el	slug	org-roam
+weiss_snails<font-lock-face.el	snails	font-lock-face
+weiss_sql<abbrevs.el	sql	abbrevs
+weiss_tags<org.el	tags	org
+weiss_telega<abbrevs.el	telega	abbrevs
+weiss_templates<org-roam.el	templates	org-roam
+weiss_temp-insert-mode<wks.el	temp-insert-mode	wks
+weiss_terminal<dired.el	terminal	dired
+weiss_text-mode<abbrevs.el	text-mode	abbrevs
+weiss_todo<org.el	todo	org
+weiss_ui<lsp-mode.el	ui	lsp-mode
+weiss_ui<org.el	ui	org
+weiss_ui<rime.el	ui	rime
+weiss_ui<snails.el	ui	snails
+weiss_ui<wks.el	ui	wks
+weiss_wash<yasdcv.el	wash	yasdcv
+weiss_weiss-write-mode<wks.el	weiss-write-mode	wks
+weiss_windown<snails.el	windown	snails
+weiss_wks-find<wks.el	wks-find	wks
+weiss_wks-vanilla-mode<wks.el	wks-vanilla-mode	wks
+weiss_xournal<org.el	xournal	org
+weiss_user-settings<global.el	user-settings	global
+weiss_keybindings<pdf-view.el	keybindings	pdf-view
+weiss_settings<citre.el	settings	citre
+weiss_keybindings<citre.el	keybindings	citre
+weiss_hook<citre.el	hook	citre
+weiss_keybindings<citre-peek.el	keybindings	citre-peek
+weiss_keybindings<cider.el	keybindings	cider
+weiss_clojure<abbrevs.el	clojure	abbrevs
+weiss_settings<cider.el	settings	cider
+weiss_settings<csv-mode.el	settings	csv-mode
+weiss_keybindings<csv-mode.el	keybindings	csv-mode
+weiss_settings<zprint.el	settings	zprint
+weiss_settings<recentf-db.el	settings	recentf-db
+weiss_settings<clj-refactor.el	settings	clj-refactor
+weiss_company<citre.el	company	citre
+\.
+
+
+--
+-- Name: class_relation class_relation_pkey; Type: CONSTRAINT; Schema: public; Owner: weiss
+--
+
+ALTER TABLE ONLY public.class_relation
+    ADD CONSTRAINT class_relation_pkey PRIMARY KEY (child);
+
+
+--
+-- Name: file file_pkey; Type: CONSTRAINT; Schema: public; Owner: weiss
+--
+
+ALTER TABLE ONLY public.file
+    ADD CONSTRAINT file_pkey PRIMARY KEY (filename);
+
+
+--
+-- PostgreSQL database dump complete
+--
+
