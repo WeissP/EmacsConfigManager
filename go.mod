@@ -2,4 +2,6 @@ module EmacsConfigManager
 
 go 1.16
 
-require github.com/jackc/pgx/v4 v4.11.0
+require (
+	github.com/mattn/go-sqlite3 v1.14.8 // indirect
+)
